@@ -1,20 +1,18 @@
-# CLASSE QUE REALIZA A BUSCA LOCAL
 from time import time
 
-
-class localSearch(object):
-    def localSearch(self, problem, search_type, i):
+class Search(object):
+    def Search(self, problem, search_fn, i):
         n_iterations = i
         cnt = 0
         start = time()
         s = []
         for i in range(n_iterations):
             
-            result = search_type(problem)
+            result = search_fn(problem)
             print("LOOP COUNT",i)
             print(result)
-            print(problem.heuristic(result))
-            if int(problem.heuristic(result)) is 0:
+            print(problem.h_loss(result))
+            if int(problem.h_loss(result)) is 0:
                 print("RESULT IS 0")
                 cnt += 1
                 s.append(result)
