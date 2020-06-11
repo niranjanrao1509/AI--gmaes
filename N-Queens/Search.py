@@ -1,6 +1,6 @@
 from time import time
 
-class Search(object):
+class SearchStates(object):
     def Search(self, problem, search_fn, i):
         n_iterations = i
         cnt = 0
